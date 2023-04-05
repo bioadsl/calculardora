@@ -1,0 +1,76 @@
+:root{
+    --scale: 1px;
+    --window-height: calc(322 * var(--scale));
+    --window-width: calc(232 * var(--scale));
+}
+
+
+body {
+    background-color: black;
+    height: 100vh;
+    color: white;
+    margin: 20px;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+table{
+    table-layout: fixed;
+    width: var(--window-width);
+    border-radius: 5px;
+}
+
+table, tr, td{
+
+/* Colocar as bordas de forma bem definida*/
+
+    border: 1px solid #3A2655;
+    border-collapse: collapse;
+}
+
+td {
+    height: calc(var(--window-height) / 7);
+    background-color: #6B5B7F;
+    text-align: center;
+    font-size: calc(20* var(--scale));
+    width: 10px;
+}
+
+/* Parte onde está sendo feito o calculo - Tela da calculadora */
+
+#display{
+    height: calc(var(--window-height) / 4);
+    text-align: right;
+    padding-right: 20px;
+    font-size: calc(var(--scale)*50);
+    font-weight: 100;
+    vertical-align: bottom;
+    background-color: #3A2655; 
+}
+
+/* Individualização de cores. As de baixo vão sobressaindo as de cima */
+
+tr:nth-child(2) td{
+    background-color: #4D3B66;
+}
+
+tr td:last-child{
+    background-color: #FF9F0B;
+}
+
+/* Hover: ativando a parte de mescla das teclas, quando passar o mouse em cima. 
+As de baixo vão sobressaindo as de cima */
+
+td:hover{
+    background-color: #A59DB2;
+}
+
+tr:nth-child(2) td:hover{
+    background-color: #6b5b7f;
+}
+
+tr td:last-child:hover{
+    background-color: #cb7d07;
+}
